@@ -3,6 +3,15 @@ const app = express();
 const port = 3000
 
 
-app.listen(port, () => {
-    console.log(`Meu servidor está rodando na porta ${port}`)
-})
+app.engine('handlebars', exphbs.engine())
+app.set('view engine', 'handlebars')
+
+
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+)
+app.use(express.json())
+
+app.use(express.static('public'))
