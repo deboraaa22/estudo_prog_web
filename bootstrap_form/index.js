@@ -29,7 +29,7 @@ app.get('/users/add', (req, res) => {
     const ValorCompra = req.body.ValorCompra;
     const ValorVenda = req.body.ValorVenda;
     const categoria = req.body.categoria;
-    const user = { nameProduto: nameProduto, nameFornecedor: namefornecedor, dataCompra: dataCompra, valorCompra: ValorCompra, valorVenda: ValorVenda, categoria: categoria }
+    const user = { nameProduto: nameProduto, nameFornecedor: nameFornecedor, dataCompra: dataCompra, valorCompra: valorCompra, valorVenda: valorVenda, categoria: categoria }
     res.render('viewuser', { user: user })
     
     })
