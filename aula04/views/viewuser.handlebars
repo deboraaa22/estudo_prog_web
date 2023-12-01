@@ -1,5 +1,8 @@
-<h2>O usuário {{user.name}} <br> com o email {{user.email}} <br>
-nasceu em {{user.dataNasc}} <br> e {{user.func}} é Funcionarios!</h2>
+{{#if auth}}
+
+
+<h2>O usuário {{user.name}} tem {{user.age}} anos de idade!</h2>
 
 <a href="/">Home</a>
 <a href="/users/add">Novo Usuário</a>
+{{/if}}
